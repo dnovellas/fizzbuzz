@@ -1,0 +1,25 @@
+{
+  "name": "fizzbuzz",
+  "version": "1.0.0",
+  "description": "Práctica #1 de la semana #4 de la misión de NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnovellas/fizzbuzz.git"
+  },
+  "keywords": [
+    "fizzbuzz"
+  ],
+  "author": "David Novella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnovellas/fizzbuzz/issues"
+  },
+  "homepage": "https://github.com/dnovellas/fizzbuzz#readme",
+  "dependencies": {
+    "jest": "^28.0.3"
+  }
+}
