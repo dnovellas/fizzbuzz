@@ -24,7 +24,7 @@ describe("Test for FizzBuzz Service", ()=>{
   test("4. Test Explorer15", ()=>{
     const explorer15 = {name: "Explorer15", score: 15}
     FizzbuzzService.applyValidationInExplorer(explorer15) // {name: "Explorer15", score: 15, trick: "FIZZBUZZ"}
-    expect(explorer15.trick).toBe('FIZZBUZZ');                      
+    expect(explorer15.trick).toBe('FIZZBUZZOOO');                      
   })
 })
 
