@@ -1,12 +1,8 @@
 const Reader = require("../../app/lib/utils/Reader");
 const ExplorerService = require("../../app/lib/services/ExplorerService");
 
-describe("Test for Explorer Service", ()=>{
-    test("1. Read JSON", ()=>{    
-        const explorers = Reader.readJsonFile("explorers.json"); // esto regresa la lista de explorers del archivo     
-        expect(explorers).not.toBe(null);        
-    });
-    test("2. Filter explorers", ()=>{
+describe("Test for Explorer Service", ()=>{    
+    test("1. Filter explorers", ()=>{
         const explorers = Reader.readJsonFile("explorers.json"); // esto regresa la lista de explorers del archivo         
         expect(Object.keys(explorers).length).toBeGreaterThan(0);
         const explorersFilteredByMission = ExplorerService.filterByMission(explorers, "node");
