@@ -18,6 +18,12 @@ app.get("/v1/explorers/:mission", (request, response)=>{
     response.json(explorersInMIssion);
 });
 
+app.get("/v1/explorers/stack/:stack", (request, response)=>{
+    const mission = request.params.stack;
+    const explorersInMIssion = ExplorerController.getExplorersByStack(mission);
+    response.json(explorersInMIssion);
+});
+
 app.get("/v1/explorers/ammount/:mission", (request, response)=>{
     const mission = request.params.mission;
     const ammountExplorersInMIssion = ExplorerController.getExplorersAmonutByMission(mission);    
