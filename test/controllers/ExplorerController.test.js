@@ -32,4 +32,11 @@ describe("Test for Explorer Controller", ()=>{
         expect(trick).toBe("FIZZBUZZ");
 
     });
+
+    test("5. get Explorers By Stack", ()=>{                
+        const explorersFilteredByStack = ExplorerController.getExplorersByStack("javascript");
+        expect(explorersFilteredByStack).not.toBe(null); 
+        expect(explorersFilteredByStack.length).toBeGreaterThan(0);
+        expect(explorersFilteredByStack.length).toBe(11);              
+    });
 });

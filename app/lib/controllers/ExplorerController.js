@@ -21,6 +21,12 @@ class Controller{
         return amountOfExplorersByMission;
     }
 
+    static getExplorersByStack(stack){
+        const explorers = Reader.readJsonFile("explorers.json");
+        const explorersByStack = ExplorerService.filterByStack(explorers, stack);
+        return explorersByStack;
+    }
+
     static applyValidationInNumber(number){        
         const trick = FizzbuzzService.applyValidationInNumber(number);
         return trick;

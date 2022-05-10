@@ -14,6 +14,11 @@ class ExplorerService{
         const explorersNames = filteredByMission.map((explorer)=>(explorer.name));
         return explorersNames;
     }
+
+    static filterByStack(explorers, stack){
+        const filteredByStack = explorers.filter((explorer)=>(explorer.stacks.includes(stack)));
+        return filteredByStack;
+    }
 }
 
 module.exports = ExplorerService;
