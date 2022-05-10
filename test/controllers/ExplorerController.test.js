@@ -17,4 +17,19 @@ describe("Test for Explorer Controller", ()=>{
         expect(explorersUserNamesByMission).not.toBe(null);       
         expect(explorersUserNamesByMission).toContain("Woopa1");
     });
+
+    test("4. Apply Validation in Number", ()=>{ 
+        let trick = ExplorerController.applyValidationInNumber(1);
+        expect(trick).toBe(1);
+
+        trick = ExplorerController.applyValidationInNumber(3);
+        expect(trick).toBe("FIZZ");
+
+        trick = ExplorerController.applyValidationInNumber(5);
+        expect(trick).toBe("BUZZ");
+
+        trick = ExplorerController.applyValidationInNumber(15);
+        expect(trick).toBe("FIZZBUZZ");
+
+    });
 });

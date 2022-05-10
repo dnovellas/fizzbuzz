@@ -1,4 +1,3 @@
-
 const FizzbuzzService = require("../../app/lib/services/FizzbuzzService");
 
 describe("Test for FizzBuzz Service", ()=>{
@@ -25,6 +24,24 @@ describe("Test for FizzBuzz Service", ()=>{
         const explorer15 = {name: "Explorer15", score: 15};
         FizzbuzzService.applyValidationInExplorer(explorer15); // {name: "Explorer15", score: 15, trick: "FIZZBUZZ"}
         expect(explorer15.trick).toBe("FIZZBUZZ");                      
+    });
+
+    test("5. Test ApplyValidationInNumber", ()=>{
+        let score = 1;
+        let trick = FizzbuzzService.applyValidationInNumber(score); // {name: "Explorer15", score: 15, trick: "FIZZBUZZ"}
+        expect(trick).toBe(1);
+        
+        score = 3;
+        trick = FizzbuzzService.applyValidationInNumber(score); // {name: "Explorer15", score: 15, trick: "FIZZBUZZ"}
+        expect(trick).toBe("FIZZ");
+
+        score = 5;
+        trick = FizzbuzzService.applyValidationInNumber(score); // {name: "Explorer15", score: 15, trick: "FIZZBUZZ"}
+        expect(trick).toBe("BUZZ");
+
+        score = 15;
+        trick = FizzbuzzService.applyValidationInNumber(score); // {name: "Explorer15", score: 15, trick: "FIZZBUZZ"}
+        expect(trick).toBe("FIZZBUZZ");
     });
 });
 
